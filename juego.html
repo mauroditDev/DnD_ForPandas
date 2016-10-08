@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>D&D for Pandas</title>
+<style>
+#container
+{	width:800px;
+	height:1000px;
+	margin:40px auto;
+	background-image:url(bambuTextura-2.jpg)}
+body
+{font-size:100%;background-color:#F3F3EF;}
+p
+{color:black;font-family:Arial,Helvetica,sans-serif;font-size:1em;}
+h1
+{color:#930;font-family:Arial,Helvetica,sans-serif;font-size:1.15em;font-weight:bold;}
+h2
+{color:#930;font-family:Arial,Helvetica,sans-serif;font-size:1.05em;font-weight:bold;}
+</style>
+
+</head>
+
+<body>
+	
+
+<div id="container">
+<div style="float:left; width:796px; height:25px"></div>
+<div style="float:left; width:80px; height:70px"></div>
+<div style="float:left; height:75px; background-image:url(imgs/dyd/dyd-txt-bgs.png)">
+<h2 style="margin-left:50px;">Status</h2>
+<p style="margin-left:50px; margin-right:50px">Turno:<span id="contador" style="margin-left:20px; margin-right:150px"></span>Muertos:<span style="margin-left:20px;" id="muertos"> </span></p>
+</div>
+<div style="float:left; width:796px; height:25px"></div>
+<div style="float:left; width:25px; height:250px"></div>
+<div id="heroe" style="border-color:#000; border:solid; border-width:medium; float:left; height:293px; width:350px">
+<img id="imgHer" src="imgs/dyd/dyd2-pana.jpg" width="350px" height="293px"></div>
+<div style="float:left; width:25px; height:250px"></div>
+<div id="enemigo" style="border:solid; border-color:#000; border-width:medium; float:left; height:293px; width:350px"><img id="imgEn" src="imgs/dyd/dyd2-1-goblin.jpg" width="350px" id="enem-pic"></div>
+<div style="float:left; width:796px; height:20px"></div>
+<div style="float:left; width:100px; height:100px;"></div>
+<div id="btn-ofen" style="float:left; height:150px; width:auto"><img src="imgs/dyd/dyd-4-ofensivo.png" width="120px" height="120px" onMouseOver="instrAtq(this)" onMouseOut="iAtqNorm(this)" onClick="ataque()"></div>
+<div style="float:left; width:40px; height:100px"></div>
+<div id="btn-defen" style="float:left; height:150px; width:auto"><img src="imgs/dyd/dyd-4-defensivo.png" width="120px" height="120px" onMouseOver="instrDef(this)" onMouseOut="iDefNorm(this)" onClick="defensivo()"></div><div style="float:left; width:40px; height:100px"></div>
+<div id="btn-pocion" style="float:left; height:150px; width:auto"><img src="imgs/dyd/dyd-4-pocion.png" width="120px" height="120px" onMouseOver="instrPoc(this)" onMouseOut="iPocNorm(this)" onClick="pocion()"></div>
+<div style="float:left; width:40px; height:100px;"></div>
+<div id="btn-varita" style="float:left; height:150px; width:auto"><img src="imgs/dyd/dyd-4-varita.png" width="120px" height="120px" onMouseOver="instrVari(this)" onMouseOut="iVariNorm(this)" onClick="varita()"></div>
+<div style="float:left; width:796px; height:20px;"></div>
+<div style="float:left; width:325px; height:45px;"></div>
+<div id="btn-cont" style="float:left; height:auto; width:auto;"><img src="imgs/dyd/dyd-btn-cont-avan.png" width="150px" onClick="continuar()"></div>
+<div style="float:left; width:796px; height:12px;"></div>
+<div style="background-image: url(imgs/dyd/dyd-txt-bgs.png); float:left; margin-left:25px; width:363px; height:100px">
+<div style="width:25px; height:90px; float:left"></div>
+<h2><span id="nombreHeroe"></span></h2>
+<p>Tu Armadura: <span id="CAheroe"></span> / Tu Vida: <span id="PVheroe"></span> / Tu Ataque: <span id="Ataque"></span><br>
+Nivel: <span id="Nivel"></span>
+</p>
+</div>
+<div style="float:left; width:363px; height:100px; margin-left:25px; background-image: url(imgs/dyd/dyd-txt-bgs.png);">
+<div style="width:25px; height:90px; float:left"></div>
+<h2>Enemigo:</h2>
+<p>
+<span id="cantidadEn"></span>
+<span id="nombreEnem"></span><br>
+CA:<span id="CAenem"></span>  /  PV:<span id="PVenem"></span>
+</p>
+</div>
+<div style="float:left; width:796px; height:20px;"></div>
+<div style="float:left; width:75px; height:85px;"></div>
+<div id="consola" style="float:left; background-image:url(imgs/dyd/dyd-txt-bgs.png); height:130px; width:650px;"><p id="alertas"></p></div>
+
+
+</div>
+
+<script src="js-DyDfP.js"></script>
+</body>
+</html>
