@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Enemy Creator - D&D for Pandas</title>
+<link href="/estilos/creator.css"  rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<input type="file" id="file-input" />
+
+	<table>
+		<tr>
+			<th>Campo</th><th>valor</th>
+		</tr>
+		<tr>
+			<td>nombre</td><td><input type="text" name="enter" class="enter" size="20" value="" id="nombre"/></td>
+		</tr>
+		<tr>
+			<td>imagen (path)</td><td><input type="text" name="enter" class="enter" size="20" value="" id="imagen"/></td>
+		</tr>
+		<tr>
+			<td>vida</td><td><input type="text" name="enter" class="enter" size="20" value="" id="vida"/></td>
+		</tr>
+		<tr>
+			<td>armadura</td><td><input type="text" name="enter" class="enter" size="20" value="" id="armadura"/></td>
+		</tr>
+		<tr>
+			<td>ataque 1</td><td><input type="text" name="enter" class="enter" size="20" value="" id="atq1"/></td>
+		</tr>
+		<tr>
+			<td>da&ntilde;o 1 min</td><td><input type="text" name="enter" class="enter" size="20" value="" id="dmg1_min"/></td>
+		</tr>
+		<tr>
+			<td>da&ntilde;o 1 suma</td><td><input type="text" name="enter" class="enter" size="20" value="" id="dmg1_sum"/></td>
+		</tr>
+		<tr>
+			<td>ataque 2 (si tiene)</td><td><input type="text" name="enter" class="enter" size="20" value="" id="atq2"/></td>
+		</tr>
+		<tr>
+			<td>da&ntilde;o 2 min(si tiene)</td><td><input type="text" name="enter" class="enter" size="20" value="" id="dmg2_min"/></td>
+		</tr>
+		<tr>
+			<td>da&ntilde;o 2 suma(si tiene)</td><td><input type="text" name="enter" class="enter" size="20" value="" id="dmg2_sum"/></td>
+		</tr>
+		<tr>
+			<td>cant_min</td><td><input type="text" name="enter" class="enter" size="20" value="" id="cantidad"/></td>
+		</tr>
+		<tr>
+			<td>variacion de cantidad</td><td><input type="text" name="enter" class="enter" size="20" value="" id="variacion"/></td>
+		</tr>
+		<tr>
+			<td>experiencia</td><td><input type="text" name="enter" class="enter" size="20" value="" id="exp"/></td>
+		</tr>
+		<tr>
+			<td>tesoro</td><td><input type="text" name="enter" class="enter" size="20" value="" id="tesoro"/></td>
+		</tr>
+	</table>
+	<button type="button" onclick="addMonstruo()">A&ntilde;adir Monstruo</button>
+	<h2 id="errorDisplay"></h2>
+	<script src="enemyCreator.js"></script>
+</body>
+</html>

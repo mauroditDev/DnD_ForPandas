@@ -52,21 +52,16 @@ var lvlUp=new Boolean(false)
 var contadorConsola=0;
 
 //--------------------------------------------------------------------------------------------------------
-function ataque()
+function ataquePod()
 {
-hAlive=checkAliveH();
-	if(hAlive==true)
+	if(checkAliveH())
 	{
-		eAlive=checkAliveE();
-		if(eAlive==true)
+		if(checkAliveE())
 		{
-		var tirada=d20();
 		defBuf=0;
-			if ((tirada+heroe[3])>=enemigo[1])
+			if (checkImpactoHer(dado(20)))
 			{
-				var dadoRes1=d6();
-				var dadoRes2=d6();
-				var damage=dadoRes1+dadoRes2+6;
+				damage = heroe.fuerza + dado(6) + dado(6) + equipo.bonusDamArma;
 				damageE(damage);
 				consola("Toma hostia de "+damage+" le has calzado!");
 				enReac=true;
@@ -88,16 +83,14 @@ else
 	{consola("Has Muerto y remuerto!")}
 }
 //--------------------------------------------------------------------------------------------------------
-function defensivo()
+function ataqueDef()
 {
-hAlive=checkAliveH();
-if(hAlive==true)
+if(checkAliveH())
 	{
-		eAlive=checkAliveE();
-		if(eAlive==true)
+		if(checkAliveE())
 		{
 		var tirada=d20();
-		defBuf=2+(heroe[4]*0.5);
+		defBuf=1+heroe.nivel;
 		consola("Bonus defensivo: "+defBuf);
 		if ((tirada+heroe[3])>=enemigo[1])
 			{
